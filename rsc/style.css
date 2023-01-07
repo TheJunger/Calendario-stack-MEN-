@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10vh;
+}
+
+.navfecha{
+    border: 1px solid black;
+    border-radius: 1vh;
+    font-size: x-large;
+    margin: 10px 0;
+    padding: 10px 25px;
+    width: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flechad, .flechai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
+    border-radius: 50%;
+    margin: 10px 10px;
+    padding: 10px 15px;
+    background-color: rgb(217, 255, 217);
+}
+
+.header div{
+    display: flex;
+}
+
+.dias{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.dia, .diaextra{
+    border: 1px solid black;
+    background-color: #fff;
+    width: 15vh;
+    padding: 3vh;
+    font-size: x-large;
+    transition: transform 0.2s;
+}
+
+
+.dia:hover{
+    transform: scale(1.05);
+    border-radius: 5px;
+}
+
+.dial{
+    border: 1px solid black;
+    background-color: #fff;
+    width: 15vh;
+    padding: 3vh;
+    font-size: x-large;
+}
+
+.domingo{
+    background-color: rgb(255, 182, 182);
+}
+
+.closebutton{
+    font-size: xx-large;
+}
+
+.labelcontainer{
+    margin: 5vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: -500vh;
+    transition: top 0.5s;
+
+}
+
+.label{
+    background-color: #fff;
+    border: 3px solid #333;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+
+.closebutton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fechacont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-bottom: 2px solid #333;
+}
+
+.labelffecha{
+    padding: 2vh;
+    width: 30vw;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.labelfactivity{
+    text-align: center;
+    font-size: large;
+    padding-bottom: 1vh;
+}
+
+.activitysetcontainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #333;
+
+}
+
+.activitysetcontainer p{
+    padding: 1vh;
+    margin: 1vh;
+    border: 1px solid #333;
+    border-radius: 1vh;
+}
+
+.activityedit{
+    display: none;
+}
+
+.tareastitle{
+    text-align: center;
+    font-size: x-large;
+    padding: 1vh 0;
+    border-bottom: 2px solid #333;
+}
+
+.labeltareas{
+    display: flex;
+    flex-direction: column;
+    max-height: 55vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.notask{
+    display: none;
+}
+
+.taskdesc{
+    max-width: 50vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2vh 5vh;
+}
+
+.estableceractividadlabel{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 35vh;
+    padding: 2vh 5vh;
+    border: 2px solid #222;
+    border-radius: 2vh;
+
+    top: -500vh;
+    transition: top 0.5s;
+
+}
+
+.estableceractividadlabel div{
+    font-size: x-large;
+    margin: 1vh 0;
+    border-radius: 2vh;
+    border: 2px solid #222;
+}
+
+.establecertrabajo{
+    background-color: lightblue;
+    padding: 2vh 5vh;
+}
+
+.establecerdescanso{
+    background-color: gold;
+    padding: 2vh 5vh;
+}
+
+.establecernotrabajo{
+    background-color: rgb(71, 221, 71);
+    padding: 2vh 5vh;
+}
+
+.establecersinasignar{
+    background-color: white;
+    padding: 2vh 5vh;
+}
+
+.establecercancelar{
+    background-color: lightcoral;
+    padding: 2vh 5vh;
+}
+
+.addtarealabel{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 25vh;
+    background-color: #fff;
+    padding: 5vh 10vh;
+    border: 2px solid #222;
+    border-radius: 2vh;
+    transition: top 0.5s;
+
+    top: -500vh;
+
+}
+
+.atlttitle{
+    padding: 0 5vh;
+    font-size: larger;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.atlttitleinput{
+    width: 98%;
+    height: 4vh;
+    margin-bottom: 2vh;
+    padding: 0 5px;
+}
+
+.addtarealabeltitle{
+    border-bottom: 2px solid #555;
+}
+
+.atldtitle{
+    padding: 0 5vh;
+    font-size: larger;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+.atlddesc{
+    width: 98%;
+    height: 10vh;
+    margin-bottom: 2vh;
+    border: 1px solid #666;
+    padding: 5px;
+}
+
+.addtarealabelbutton, .canceltarealabelbutton{
+    padding: 1vh;
+    width: 100%;
+}
+
+.btncont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.crudTask{
+    display: flex;
+    padding-left: 1vh;
+}
+
+.crudTask div{
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
+
+.titleCont{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: larger;
+    padding: 1vh ;
+    border-bottom: 1px solid #222;
+    margin: 0 5vh;
+    background-image: linear-gradient(to top, lightblue,#fff , #fff);
+}
